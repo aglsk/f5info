@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Produtos de Informática - F5 Informática & Acessórios - Tecnologia com Melhor Preço">
+    <title>Produtos - F5 Informática & Acessórios</title>
+    <link rel="icon" type="imagem/png" href="./img/logo2.png">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Righteous&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --primary-dark: #564FD9;
+            --secondary: #FF6584;
+            --dark: #1E1E2C;
+            --light: #F8F9FA;
+            --gray: #6C757D;
+            --success: #28A745;
+            --warning: #FFC107;
+            --danger: #DC3545;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .logo-text {
+            font-family: 'Righteous', cursive;
+            font-size: 1.8rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-subtext {
+            font-size: 0.7rem;
+            color: var(--gray);
+            margin-top: -5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .header-contact:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-icons a {
+            color: var(--dark);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .header-icons a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            height: 40vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .breadcrumb span {
+            color: white;
+            opacity: 0.8;
+        }
+
+        /* Products Section */
+        .products-page {
+            padding: 80px 0;
+            background: white;
+        }
+		
+		/* Products Section */
+        .products-ben10 {
+            padding: 20px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .products-tabs {
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 5px;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .search-filter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 10px 15px 10px 40px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            min-width: 250px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .sort-select {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        .product-badge.novo {
+            background: var(--success);
+        }
+
+        .product-badge.promocao {
+            background: var(--secondary);
+        }
+
+        .product-badge.oferta {
+            background: var(--warning);
+            color: var(--dark);
+        }
+
+        .product-badge.lancamento {
+            background: var(--primary);
+        }
+
+        .product-badge.mais-vendido {
+            background: var(--danger);
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-actions {
+            opacity: 1;
+        }
+
+        .action-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: white;
+            color: var(--dark);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .action-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .old-price {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-decoration: line-through;
+        }
+
+        .product-rating {
+            color: var(--warning);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+            padding: 10px;
+            background: var(--success);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
+        }
+
+        /* Loading */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            grid-column: 1 / -1;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(108, 99, 255, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: var(--light);
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .page-btn.active {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .page-btn:hover:not(.active) {
+            background: #e9ecef;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 3px;
+        }
+
+        .footer-col p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .footer-social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .payment-methods img {
+            height: 25px;
+            filter: brightness(0) invert(1);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .payment-methods img:hover {
+            opacity: 1;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--dark);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 80px 0;
+            }
+            
+            .products-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-filter {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-box input {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .products-tabs {
+                justify-content: center;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) {
+            .product-actions {
+                opacity: 1 !important;
+            }
+            
+            .action-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            
+            .btn, .whatsapp-btn, .tab-btn {
+                padding: 15px 30px;
+            }
+        }
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+.logo-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-wrapper nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    box-shadow: var(--shadow);
+    z-index: 999;
+  }
+
+  .nav-wrapper nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav ul li {
+    border-top: 1px solid #eee;
+  }
+
+  nav ul li a {
+    padding: 15px 20px;
+    display: block;
+  }
+}
+
+.products-tabs {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px 15px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  background: white;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+}
+
+.products-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  white-space: nowrap;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  background: transparent;
+  color: var(--dark);
+}
+
+.tab-btn.active {
+  background: var(--gradient);
+  color: white;
+}
+.products-tabs-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.products-tabs {
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px 15px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.products-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.tab-btn.active {
+  background: var(--gradient);
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+  <div class="logo-toggle-wrapper" style="display: flex; align-items: center; gap: 15px;">
+    <div class="logo">
+      <i class="fas fa-bolt"></i>
+      <div>
+        <div class="logo-text">F5 Informática</div>
+        <div class="logo-subtext">& Acessórios</div>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+			
+            
+			<div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html" class="active">Produtos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+			</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="produtos.html">Produtos</a>
+                </div>
+                <h1>Nossos Produtos</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Catálogo Completo</h2>
+                <p>Encontre os melhores produtos de informática com os preços mais competitivos do mercado</p>
+            </div>
+            
+            <div class="products-tabs-wrapper">
+                <div class="products-tabs">
+                    <button class="tab-btn active" data-category="all">Todos</button>
+                    <button class="tab-btn" data-category="Notebooks">Notebooks</button>
+                    <button class="tab-btn" data-category="Monitores">Monitores</button>
+                    <button class="tab-btn" data-category="Periféricos">Periféricos</button>
+                    <button class="tab-btn" data-category="Hardware">Hardware</button>
+                    <button class="tab-btn" data-category="Acessórios">Acessórios</button>
+					<button class="tab-btn" data-category="Computadores">Computadores</button>
+                </div>
+				</div>
+				
+                <section class="products-ben10">
+                <div class="search-filter" class="products-tabs">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar produtos..." id="search-input">
+                    </div>
+                    <select class="sort-select" id="sort-select">
+                        <option value="recent">Mais recentes</option>
+                        <option value="price-asc">Preço: menor para maior</option>
+                        <option value="price-desc">Preço: maior para menor</option>
+                        <option value="rating">Melhor avaliação</option>
+                    </select>
+                </div>
+            </div>
+			</section>
+            
+            <div class="products-grid" id="products-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-bolt" style="font-size: 2.5rem; color: var(--primary);"></i>
+                        <div>
+                            <div class="logo-text" style="font-size: 2rem;">F5 Informática</div>
+                            <div class="logo-subtext" style="color: rgba(255,255,255,0.7);">& Acessórios</div>
+                        </div>
+                    </div>
+                    <p>Trabalhamos com marcas de qualidade e atendimento personalizado para garantir a melhor experiência ao cliente.</p>
+                    
+                    <div class="footer-social-links">
+                        <a href="https://facebook.com/61563941881858/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/f5info_caxias"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="produtos.html"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Promoções</a></li>
+                        <li><a href="sobre.html"><i class="fas fa-chevron-right"></i> Sobre Nós</a></li>
+                        <li><a href="contato.html"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Informações</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de Privacidade</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Termos de Serviço</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trocas e Devoluções</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://g.co/kgs/vmrMLEC"><i class="fas fa-map-marker-alt"></i> Av. Gov. Leonel de Moura Brizola, 1806 - Stand 43/44 - Centro, Duque de Caxias - RJ, 25010-009</a></li>
+                        <li><a href="tel:+5521981012518"><i class="fas fa-phone-alt"></i> (21) 98101-2518</a></li>
+                        <li><a href="https://wa.me/5521981012518"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="payment-methods">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Visa">
+                <img src="https://cdn-icons-png.flaticon.com/512/15527/15527520.png" alt="Mastercard">
+                <img src="https://devtools.com.br/img/pix/logo-pix-png-icone-520x520.png" alt="Pix">
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> F5 Informática & Acessórios. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // URL da API
+        const API_URL = 'https://script.google.com/macros/s/AKfycbx4oAzBJhE9Nqm2ggPyU1pf3B0AVhrbfRynkwpLAA906XqZi0OrnZpetcMndiFUlsSO/exec?tela=produtos';
+        
+        // Variáveis globais
+        let allProducts = []; // Todos os produtos carregados
+        let filteredProducts = []; // Produtos filtrados
+        let currentPage = 1;
+        const productsPerPage = 8;
+        const whatsappNumber = '5521981012518'; // Seu número do WhatsApp
+
+        // Elementos do DOM
+        const productsGrid = document.getElementById('products-grid');
+        const searchInput = document.getElementById('search-input');
+        const sortSelect = document.getElementById('sort-select');
+        const pagination = document.getElementById('pagination');
+        const toast = document.getElementById('toast');
+
+        // Função para formatar preço
+        function formatPrice(price) {
+            if (typeof price === 'string' && price.includes('-')) {
+                return '0,00';
+            }
+            
+            const number = parseFloat(price);
+            if (isNaN(number)) return '0,00';
+            
+            return number.toLocaleString('pt-BR', { 
+                minimumFractionDigits: 2, 
+                maximumFractionDigits: 2 
+            });
+        }
+
+        // Função para extrair avaliação (estrelas) da string de data
+        function extractRating(dateString) {
+            if (!dateString) return 0;
+            
+            const month = parseInt(dateString.split('-')[1]);
+            return Math.min(5, Math.max(1, month / 2));
+        }
+
+        // Função para gerar estrelas de avaliação
+        function generateRatingStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 >= 0.5;
+            const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+            
+            let stars = '';
+            
+            for (let i = 0; i < fullStars; i++) {
+                stars += '<i class="fas fa-star"></i>';
+            }
+            
+            if (hasHalfStar) {
+                stars += '<i class="fas fa-star-half-alt"></i>';
+            }
+            
+            for (let i = 0; i < emptyStars; i++) {
+                stars += '<i class="far fa-star"></i>';
+            }
+            
+            return stars;
+        }
+
+        // Função para carregar produtos da API
+        async function fetchProducts() {
+            try {
+                const response = await fetch(API_URL);
+                
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar produtos');
+                }
+                
+                let apiProducts = await response.json();
+                
+                // Processar os dados da API para o formato esperado
+                return apiProducts.map(product => ({
+                    id: product.ID,
+                    name: product.Nome,
+                    category: product.Categoria,
+                    price: parseFloat(product['Preço']?.replace(/\./g, '').replace(',', '.')) || 0,
+                    oldPrice: parseFloat(product['Preço Antigo']?.replace(/\./g, '').replace(',', '.')) || 0,
+                    images: product.Imagens || [],
+                    rating: extractRating(product.Avaliação),
+                    badge: product.Selo === '' ? null : product.Selo.toLowerCase(),
+                    specs: product['Especificações Técnicas'],
+                    description: product['Especificações Técnicas']
+                }));
+            } catch (error) {
+                console.error('Erro ao carregar produtos:', error);
+                showToast('Erro ao carregar produtos. Tente novamente mais tarde.');
+                return [];
+            }
+        }
+
+        // Função para redirecionar para o WhatsApp
+        function redirectToWhatsApp(product) {
+            // Formata a mensagem
+            const message = `Olá, gostaria de comprar o seguinte produto:\n\n*${product.name}*\n\n*Preço:* R$ ${formatPrice(product.price)}\n\n*Descrição:*\n\n${product.description || 'Sem descrição disponível'}\n\nPoderia me ajudar com essa compra?`;
+            
+            // Codifica a mensagem para URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Cria o link do WhatsApp
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            // Redireciona para o WhatsApp
+            window.location.href = whatsappUrl;
+            
+            // Alternativa que abre em nova aba (descomente se preferir)
+            // window.open(whatsappUrl, '_blank');
+        }
+
+        // Função para renderizar produtos (atualizada)
+        function renderProducts(productsArray) {
+            if (productsArray.length === 0) {
+                productsGrid.innerHTML = '<p class="no-products">Nenhum produto encontrado com esses critérios.</p>';
+                pagination.innerHTML = '';
+                return;
+            }
+            
+            const startIndex = (currentPage - 1) * productsPerPage;
+            const endIndex = startIndex + productsPerPage;
+            const paginatedProducts = productsArray.slice(startIndex, endIndex);
+            
+            productsGrid.innerHTML = paginatedProducts.map(product => `
+                <div class="product-card" data-id="${product.id}">
+                    ${product.badge ? `<span class="product-badge ${product.badge}">${formatBadgeText(product.badge)}</span>` : ''}
+                    <div class="product-image">
+                        <img src="${product.images[0] || 'https://via.placeholder.com/500'}" alt="${product.name}" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category}</span>
+                        <h3 class="product-title">${product.name}</h3>
+                        <div class="product-price">
+                            <span class="current-price">R$ ${formatPrice(product.price)}</span>
+                            ${product.oldPrice !== 0 ? `<span class="old-price">R$ ${formatPrice(product.oldPrice)}</span>` : ''}
+                        </div>
+                        <button class="whatsapp-btn" onclick="redirectToWhatsApp(${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                            <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Adicionar event listeners aos botões do WhatsApp
+            document.querySelectorAll('.whatsapp-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-id');
+                    const product = allProducts.find(p => p.id === productId);
+                    if (product) {
+                        redirectToWhatsApp(product);
+                    }
+                });
+            });
+            
+            // Renderizar paginação
+            renderPagination(productsArray.length);
+        }
+
+        // Função para formatar texto do selo
+        function formatBadgeText(badge) {
+            const badges = {
+                'novo': 'Novo',
+                'promocao': 'Promoção',
+                'oferta': 'Oferta',
+                'lancamento': 'Lançamento',
+                'mais-vendido': 'Mais Vendido'
+            };
+            return badges[badge] || badge;
+        }
+
+        // Função para renderizar paginação
+        function renderPagination(totalProducts) {
+            const totalPages = Math.ceil(totalProducts / productsPerPage);
+            
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+            
+            let paginationHTML = '';
+            
+            // Botão Anterior
+            if (currentPage > 1) {
+                paginationHTML += `<button class="page-btn" data-page="${currentPage - 1}"><i class="fas fa-chevron-left"></i></button>`;
+            }
+            
+            // Páginas
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === currentPage) {
+                    paginationHTML += `<button class="page-btn active" data-page="${i}">${i}</button>`;
+                } else if (
+                    i === 1 || 
+                    i === totalPages || 
+                    (i >= currentPage - 1 && i <= currentPage + 1)
+                ) {
+                    paginationHTML += `<button class="page-btn" data-page="${i}">${i}</button>`;
+                } else if (i === currentPage - 2 || i === currentPage + 2) {
+                    paginationHTML += `<span class="page-dots">...</span>`;
+                }
+            }
+            
+            // Botão Próximo
+            if (currentPage < totalPages) {
+                paginationHTML += `<button class="page-btn" data-page="${currentPage + 1}"><i class="fas fa-chevron-right"></i></button>`;
+            }
+            
+            pagination.innerHTML = paginationHTML;
+            
+            // Adicionar event listeners aos botões de paginação
+            document.querySelectorAll('.page-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    currentPage = parseInt(this.getAttribute('data-page'));
+                    renderProducts(filteredProducts);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+        }
+
+        // Função para filtrar produtos
+        function filterProducts() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = document.querySelector('.tab-btn.active').getAttribute('data-category');
+            const sortOption = sortSelect.value;
+            
+            filteredProducts = allProducts.filter(product => {
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm) || 
+                                     product.category.toLowerCase().includes(searchTerm);
+                const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+                return matchesSearch && matchesCategory;
+            });
+            
+            // Ordenar produtos
+            switch(sortOption) {
+                case 'price-asc':
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-desc':
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'rating':
+                    filteredProducts.sort((a, b) => b.rating - a.rating);
+                    break;
+                case 'recent':
+                default:
+                    // Mantém a ordem original (mais recentes primeiro)
+                    break;
+            }
+            
+            currentPage = 1;
+            renderProducts(filteredProducts);
+        }
+
+        // Função para mostrar notificação toast
+        function showToast(message) {
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Carregar produtos da API
+            allProducts = await fetchProducts();
+            filteredProducts = [...allProducts];
+            
+            // Renderizar produtos
+            renderProducts(filteredProducts);
+            
+            // Atualizar ano no footer
+            document.querySelector('.footer-bottom p').innerHTML = `&copy; ${new Date().getFullYear()} F5 Informática & Acessórios. Todos os direitos reservados.`;
+            
+            // Event listeners para filtros
+            searchInput.addEventListener('input', filterProducts);
+            sortSelect.addEventListener('change', filterProducts);
+            
+            // Event listeners para tabs
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    filterProducts();
+                });
+            });
+            
+            // Otimizações para dispositivos touch
+            if ('ontouchstart' in window || navigator.maxTouchPoints) {
+                document.body.classList.add('touch-device');
+                
+                // Aumentar área de toque para botões importantes
+                document.querySelectorAll('.btn, .whatsapp-btn, .action-btn').forEach(button => {
+                    button.style.padding = '15px 25px';
+                });
+            }
+        });
+    </script>
+	<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-wrapper nav');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      navMenu.classList.remove('active');
+    }
+  });
+</script>
+</body>
+</html>
