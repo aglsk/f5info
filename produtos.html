@@ -231,12 +231,6 @@
             padding: 80px 0;
             background: white;
         }
-		
-		/* Products Section */
-        .products-ben10 {
-            padding: 20px 0;
-            background: white;
-        }
 
         .section-title {
             text-align: center;
@@ -769,165 +763,165 @@
             }
         }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
 
-.logo-toggle-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+            .logo-toggle-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: var(--primary);
-  cursor: pointer;
-}
+            .menu-toggle {
+                display: none;
+                background: none;
+                border: none;
+                font-size: 1.8rem;
+                color: var(--primary);
+                cursor: pointer;
+            }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
+            @media (max-width: 768px) {
+                .menu-toggle {
+                    display: block;
+                }
 
-  .nav-wrapper nav {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    box-shadow: var(--shadow);
-    z-index: 999;
-  }
+                .nav-wrapper nav {
+                    display: none;
+                    flex-direction: column;
+                    background-color: white;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    left: 0;
+                    box-shadow: var(--shadow);
+                    z-index: 999;
+                }
 
-  .nav-wrapper nav.active {
-    display: flex;
-  }
+                .nav-wrapper nav.active {
+                    display: flex;
+                }
 
-  nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
+                nav ul {
+                    flex-direction: column;
+                    gap: 0;
+                }
 
-  nav ul li {
-    border-top: 1px solid #eee;
-  }
+                nav ul li {
+                    border-top: 1px solid #eee;
+                }
 
-  nav ul li a {
-    padding: 15px 20px;
-    display: block;
-  }
-}
+                nav ul li a {
+                    padding: 15px 20px;
+                    display: block;
+                }
+            }
 
-.products-tabs {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  gap: 10px;
-  padding: 10px 15px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  background: white;
-  border-radius: 50px;
-  box-shadow: var(--shadow);
-}
+            .products-tabs {
+                display: flex;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                gap: 10px;
+                padding: 10px 15px;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                background: white;
+                border-radius: 50px;
+                box-shadow: var(--shadow);
+            }
 
-.products-tabs::-webkit-scrollbar {
-  display: none;
-}
+            .products-tabs::-webkit-scrollbar {
+                display: none;
+            }
 
-.tab-btn {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  white-space: nowrap;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  background: transparent;
-  color: var(--dark);
-}
+            .tab-btn {
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+                white-space: nowrap;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 50px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: var(--transition);
+                background: transparent;
+                color: var(--dark);
+            }
 
-.tab-btn.active {
-  background: var(--gradient);
-  color: white;
-}
-.products-tabs-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
+            .tab-btn.active {
+                background: var(--gradient);
+                color: white;
+            }
+            .products-tabs-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+            }
 
-.products-tabs {
-  display: inline-flex;
-  gap: 10px;
-  padding: 10px 15px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  white-space: nowrap;
-}
+            .products-tabs {
+                display: inline-flex;
+                gap: 10px;
+                padding: 10px 15px;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                white-space: nowrap;
+            }
 
-.products-tabs::-webkit-scrollbar {
-  display: none;
-}
+            .products-tabs::-webkit-scrollbar {
+                display: none;
+            }
 
-.tab-btn {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  background: transparent;
-  white-space: nowrap;
-  transition: var(--transition);
-}
+            .tab-btn {
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 50px;
+                font-weight: 600;
+                cursor: pointer;
+                background: transparent;
+                white-space: nowrap;
+                transition: var(--transition);
+            }
 
-.tab-btn.active {
-  background: var(--gradient);
-  color: white;
-}
-
+            .tab-btn.active {
+                background: var(--gradient);
+                color: white;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
-  <div class="logo-toggle-wrapper" style="display: flex; align-items: center; gap: 15px;">
-    <div class="logo">
-      <i class="fas fa-bolt"></i>
-      <div>
-        <div class="logo-text">F5 Informática</div>
-        <div class="logo-subtext">& Acessórios</div>
-      </div>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-			
+            <div class="logo-toggle-wrapper" style="display: flex; align-items: center; gap: 15px;">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <div class="logo-text">F5 Informática</div>
+                        <div class="logo-subtext">& Acessórios</div>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
             
-			<div class="nav-wrapper">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produtos.html" class="active">Produtos</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-			</div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html" class="active">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -960,25 +954,22 @@
                     <button class="tab-btn" data-category="Periféricos">Periféricos</button>
                     <button class="tab-btn" data-category="Hardware">Hardware</button>
                     <button class="tab-btn" data-category="Acessórios">Acessórios</button>
-					<button class="tab-btn" data-category="Computadores">Computadores</button>
-                </div>
-				</div>
-				
-                <section class="products-ben10">
-                <div class="search-filter" class="products-tabs">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Buscar produtos..." id="search-input">
-                    </div>
-                    <select class="sort-select" id="sort-select">
-                        <option value="recent">Mais recentes</option>
-                        <option value="price-asc">Preço: menor para maior</option>
-                        <option value="price-desc">Preço: maior para menor</option>
-                        <option value="rating">Melhor avaliação</option>
-                    </select>
+                    <button class="tab-btn" data-category="Computadores">Computadores</button>
                 </div>
             </div>
-			</section>
+            
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar produtos..." id="search-input">
+                </div>
+                <select class="sort-select" id="sort-select">
+                    <option value="recent">Mais recentes</option>
+                    <option value="price-asc">Preço: menor para maior</option>
+                    <option value="price-desc">Preço: maior para menor</option>
+                    <option value="rating">Melhor avaliação</option>
+                </select>
+            </div>
             
             <div class="products-grid" id="products-grid">
                 <div class="loading">
@@ -1140,11 +1131,10 @@
                     category: product.Categoria,
                     price: parseFloat(product['Preço']?.replace(/\./g, '').replace(',', '.')) || 0,
                     oldPrice: parseFloat(product['Preço Antigo']?.replace(/\./g, '').replace(',', '.')) || 0,
-                    images: product.Imagens || [],
+                    image: product.Imagens || 'https://via.placeholder.com/500',
                     rating: extractRating(product.Avaliação),
                     badge: product.Selo === '' ? null : product.Selo.toLowerCase(),
-                    specs: product['Especificações Técnicas'],
-                    description: product['Especificações Técnicas']
+                    description: product['Especificações Técnicas'] || 'Sem descrição disponível'
                 }));
             } catch (error) {
                 console.error('Erro ao carregar produtos:', error);
@@ -1156,7 +1146,7 @@
         // Função para redirecionar para o WhatsApp
         function redirectToWhatsApp(product) {
             // Formata a mensagem
-            const message = `Olá, gostaria de comprar o seguinte produto:\n\n*${product.name}*\n\n*Preço:* R$ ${formatPrice(product.price)}\n\n*Descrição:*\n\n${product.description || 'Sem descrição disponível'}\n\nPoderia me ajudar com essa compra?`;
+            const message = `Olá, gostaria de comprar o seguinte produto:\n\n*${product.name}*\n\n*Preço:* R$ ${formatPrice(product.price)}\n\n*Descrição:*\n\n${product.description}\n\nPoderia me ajudar com essa compra?`;
             
             // Codifica a mensagem para URL
             const encodedMessage = encodeURIComponent(message);
@@ -1166,12 +1156,9 @@
             
             // Redireciona para o WhatsApp
             window.location.href = whatsappUrl;
-            
-            // Alternativa que abre em nova aba (descomente se preferir)
-            // window.open(whatsappUrl, '_blank');
         }
 
-        // Função para renderizar produtos (atualizada)
+        // Função para renderizar produtos (atualizada para ficar igual à index)
         function renderProducts(productsArray) {
             if (productsArray.length === 0) {
                 productsGrid.innerHTML = '<p class="no-products">Nenhum produto encontrado com esses critérios.</p>';
@@ -1185,9 +1172,12 @@
             
             productsGrid.innerHTML = paginatedProducts.map(product => `
                 <div class="product-card" data-id="${product.id}">
-                    ${product.badge ? `<span class="product-badge ${product.badge}">${formatBadgeText(product.badge)}</span>` : ''}
+                    ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
                     <div class="product-image">
-                        <img src="${product.images[0] || 'https://via.placeholder.com/500'}" alt="${product.name}" loading="lazy">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" data-action="share"><i class="fas fa-share-alt"></i></button>
+                        </div>
                     </div>
                     <div class="product-info">
                         <span class="product-category">${product.category}</span>
@@ -1196,6 +1186,10 @@
                             <span class="current-price">R$ ${formatPrice(product.price)}</span>
                             ${product.oldPrice !== 0 ? `<span class="old-price">R$ ${formatPrice(product.oldPrice)}</span>` : ''}
                         </div>
+                        <div class="product-rating">
+                            ${generateRatingStars(product.rating)}
+                            <span>(${product.rating.toFixed(1)})</span>
+                        </div>
                         <button class="whatsapp-btn" onclick="redirectToWhatsApp(${JSON.stringify(product).replace(/"/g, '&quot;')})">
                             <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
                         </button>
@@ -1203,19 +1197,85 @@
                 </div>
             `).join('');
             
-            // Adicionar event listeners aos botões do WhatsApp
-            document.querySelectorAll('.whatsapp-btn').forEach(button => {
+            // Adicionar event listeners para ações dos produtos
+            document.querySelectorAll('.action-btn').forEach(button => {
                 button.addEventListener('click', function() {
-                    const productId = this.getAttribute('data-id');
-                    const product = allProducts.find(p => p.id === productId);
+                    const action = this.getAttribute('data-action');
+                    const productCard = this.closest('.product-card');
+                    const productId = productCard.getAttribute('data-id');
+                    const product = productsArray.find(p => p.id === productId);
+                    
                     if (product) {
-                        redirectToWhatsApp(product);
+                        switch(action) {
+                            case 'share':
+                                shareProduct(product);
+                                break;
+                        }
                     }
                 });
             });
             
             // Renderizar paginação
             renderPagination(productsArray.length);
+        }
+
+        // Função para compartilhar produto
+        function shareProduct(product) {
+            const shareUrl = window.location.href.split('?')[0] + `?product=${product.id}`;
+            const shareText = `Confira ${product.name} por apenas R$ ${formatPrice(product.price)} na F5 Informática!`;
+            
+            // Configurar botões de compartilhamento
+            const whatsappBtn = document.createElement('a');
+            whatsappBtn.href = `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+            whatsappBtn.className = 'share-btn whatsapp';
+            whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+            whatsappBtn.target = '_blank';
+            
+            const facebookBtn = document.createElement('a');
+            facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+            facebookBtn.className = 'share-btn facebook';
+            facebookBtn.innerHTML = '<i class="fab fa-facebook-f"></i>';
+            facebookBtn.target = '_blank';
+            
+            const twitterBtn = document.createElement('a');
+            twitterBtn.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+            twitterBtn.className = 'share-btn twitter';
+            twitterBtn.innerHTML = '<i class="fab fa-twitter"></i>';
+            twitterBtn.target = '_blank';
+            
+            const linkBtn = document.createElement('button');
+            linkBtn.className = 'share-btn link';
+            linkBtn.innerHTML = '<i class="fas fa-link"></i>';
+            linkBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(shareUrl).then(() => {
+                    showToast('Link copiado para a área de transferência!');
+                });
+            });
+            
+            // Criar modal de compartilhamento
+            const modal = document.createElement('div');
+            modal.className = 'share-modal';
+            modal.innerHTML = `
+                <h3>Compartilhar Produto</h3>
+                <div class="share-buttons"></div>
+            `;
+            
+            const shareButtons = modal.querySelector('.share-buttons');
+            shareButtons.appendChild(whatsappBtn);
+            shareButtons.appendChild(facebookBtn);
+            shareButtons.appendChild(twitterBtn);
+            shareButtons.appendChild(linkBtn);
+            
+            // Adicionar modal ao body
+            document.body.appendChild(modal);
+            modal.style.display = 'block';
+            
+            // Fechar modal ao clicar fora
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            });
         }
 
         // Função para formatar texto do selo
@@ -1360,25 +1420,25 @@
             }
         });
     </script>
-	<script>
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.nav-wrapper nav');
+    <script>
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-wrapper nav');
 
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
 
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
-  });
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
 
-  document.addEventListener('click', e => {
-    if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
-      navMenu.classList.remove('active');
-    }
-  });
-</script>
+        document.addEventListener('click', e => {
+            if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
