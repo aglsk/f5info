@@ -94,7 +94,7 @@
 
         .logo-text {
             font-family: 'Righteous', cursive;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
@@ -933,7 +933,7 @@
             }
             
             .section-title h2 {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
             
             .products-tabs {
@@ -970,65 +970,86 @@
             box-shadow: 0 8px 25px rgba(108, 99, 255, 0.6);
         }
 
-        /* Touch device optimizations */
-        @media (hover: none) {
-            .product-actions {
-                opacity: 1 !important;
-            }
-            
-            .action-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-            }
-            
-            .btn, .whatsapp-btn, .tab-btn {
-                padding: 15px 30px;
-            }
-            
-            /* Increase tap targets */
-            nav ul li a {
-                padding: 10px 0;
-            }
-            
-            .header-contact {
-                padding: 12px 20px;
-            }
-            
-            .header-icons a {
-                padding: 8px;
-            }
-        }
-		
-		@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+/* ======================
+   TOUCH DEVICE OPTIMIZATIONS
+   ====================== */
+@media (hover: none) and (pointer: coarse) {
+  .product-actions {
+    opacity: 1 !important;
   }
-
-.logo-toggle-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  
+  .action-btn {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .btn, 
+  .whatsapp-btn, 
+  .tab-btn {
+    padding: 12px 24px;
+    min-height: 48px; /* Better touch target */
+  }
+  
+  /* Enhanced touch targets */
+  nav ul li a {
+    padding: 12px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-contact {
+    padding: 12px 20px;
+    min-height: 44px;
+  }
+  
+  .header-icons a {
+    padding: 12px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
+/* ======================
+   RESPONSIVE MENU TOGGLE
+   ====================== */
 .menu-toggle {
-  display: none;
+  display: none; /* Hidden by default */
   background: white;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--primary);
   cursor: pointer;
-  padding: 8px;
+  padding: 1px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  min-width: 44px; /* Better touch target */
+  min-height: 44px;
 }
 
-/* Visível somente em dispositivos com largura até 992px */
-@media (max-width: 992px) {
-  .menu-toggle {
-    display: block;
-  }
+.menu-toggle:hover,
+.menu-toggle:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
 
+.menu-toggle:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
   .nav-wrapper nav {
     display: none;
     flex-direction: column;
@@ -1147,7 +1168,7 @@
         <div class="logo-subtext">& Acessórios</div>
       </div>
     </div>
-    <button class="menu-toggle" aria-label="Abrir Menu">
+    <button class="menu-toggle" aria-label="Abrir Menu" aria-expanded="false">
       <i class="fas fa-bars"></i>
     </button>
   </div>
