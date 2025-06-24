@@ -81,7 +81,7 @@
 
         .logo-text {
             font-family: 'Righteous', cursive;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
@@ -646,8 +646,6 @@
         }
 		
 		@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
   }
 
 .logo-toggle-wrapper {
@@ -656,18 +654,39 @@
   gap: 15px;
 }
 
+/* ======================
+   RESPONSIVE MENU TOGGLE
+   ====================== */
 .menu-toggle {
-  display: none;
-  background: none;
+  display: none; /* Hidden by default */
+  background: white;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--primary);
   cursor: pointer;
+  padding: 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  min-width: 44px; /* Better touch target */
+  min-height: 44px;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.menu-toggle:active {
+  transform: scale(0.98);
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-wrapper nav {
@@ -708,13 +727,13 @@
         <div class="container header-container">
   <div class="logo-toggle-wrapper" style="display: flex; align-items: center; gap: 15px;">
     <div class="logo">
-      <i class="fas fa-bolt"></i>
+      <img src="./img/logo2.png" alt="Ícone" style="width: 4em; height: 4em;">
       <div>
         <div class="logo-text">F5 Informática</div>
         <div class="logo-subtext">& Acessórios</div>
       </div>
     </div>
-    <button class="menu-toggle" aria-label="Abrir Menu">
+    <button class="menu-toggle" aria-label="Abrir Menu" aria-expanded="false">
       <i class="fas fa-bars"></i>
     </button>
   </div>
