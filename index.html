@@ -26,6 +26,20 @@
     <meta name="twitter:description" content="Trabalhamos com marcas de qualidade e atendimento personalizado para garantir a melhor experiência ao cliente." />
     <meta name="twitter:image" content="/img/logo.png" />
     <meta name="twitter:url" content="https://f5info.vercel.app/" />
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "d11f8279-fbbe-4f54-aec6-80b32074a5a5",
+      safari_web_id: "web.onesignal.auto.3377791d-2467-4a62-9fdc-3aca1a0bc947",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
     <!-- Estilos -->
     <style>
         :root {
