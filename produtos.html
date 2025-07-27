@@ -1384,33 +1384,38 @@
         
 
 function showProductModal(product) {
-    const modal = document.getElementById('product-modal');
-    const content = document.getElementById('modal-content');
-    const image = document.getElementById('modal-img');
+  const modal = document.getElementById('product-modal');
+  const content = document.getElementById('modal-content');
+  const image = document.getElementById('modal-img');
 
-    image.src = product.image;
-    image.alt = product.name;
+  image.src = product.image;
+  image.alt = product.name;
 
-    content.innerHTML = `
-        <h2 style="margin-bottom:10px; font-size:1.8rem;">${product.name}</h2>
-        <p style="margin-bottom:5px;"><strong>Categoria:</strong> ${product.category}</p>
-        <p style="margin-bottom:5px;"><strong>Preço:</strong> <span style="color:#007bff; font-weight:bold;">R$ ${formatPrice(product.price)}</span> ${product.oldPrice > 0 ? `<span style="text-decoration:line-through; color:gray;">R$ ${formatPrice(product.oldPrice)}</span>` : ''}</p>
-        <p style="margin-bottom:5px;"><strong>Avaliação:</strong> ${generateRatingStars(product.rating)} (${product.rating.toFixed(1)})</p>
-        <hr style="margin:15px 0;">
-        <p style="white-space:pre-wrap; line-height:1.5;"><strong>Descrição Técnica:</strong><br>${product.description}</p>
-        <div style="margin-top:20px;">
-            <button class="whatsapp-btn" onclick="redirectToWhatsApp(${JSON.stringify(product).replace(/"/g, '&quot;')})">
-                <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-            </button>
-        </div>
-    `;
+  content.innerHTML = `
+    <h1 style="font-size:1.5rem; margin-bottom:10px;">${product.name}</h1>
+    <p><strong>Categoria:</strong> ${product.category}</p>
+    <p style="font-size:1.4rem; color:#007bff; font-weight:bold; margin:10px 0;">
+      R$ ${formatPrice(product.price)} 
+      ${product.oldPrice > 0 ? `<span style="text-decoration:line-through; color:#999; font-size:1rem; margin-left:8px;">R$ ${formatPrice(product.oldPrice)}</span>` : ""}
+    </p>
+    <p><strong>Avaliação:</strong> ${generateRatingStars(product.rating)} (${product.rating.toFixed(1)})</p>
+    <hr style="margin:20px 0;">
+    <h3>Especificações Técnicas</h3>
+    <pre style="white-space:pre-wrap; font-family:inherit;">${product.description}</pre>
+    <div style="margin-top:20px;">
+      <button class="whatsapp-btn" onclick="redirectToWhatsApp(product)">
+        <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
+      </button>
+    </div>
+  `;
 
-    modal.style.display = 'flex';
+  modal.style.display = 'flex';
 }
 
 function closeProductModal() {
-    document.getElementById('product-modal').style.display = 'none';
+  document.getElementById('product-modal').style.display = 'none';
 }
+
 
 
 
