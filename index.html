@@ -1645,32 +1645,36 @@
 
         
 function showProductModal(product) {
-    const modal = document.getElementById('product-modal');
-    const content = document.getElementById('modal-content');
-    const image = document.getElementById('modal-img');
+  const modal = document.getElementById('product-modal');
+  const content = document.getElementById('modal-content');
+  const image = document.getElementById('modal-img');
 
-    image.src = product.image;
-    image.alt = product.name;
+  image.src = product.image;
+  image.alt = product.name;
 
-    content.innerHTML = `
-        <h2 style="margin-bottom:10px; font-size:1.8rem;">${product.name}</h2>
-        <p style="margin-bottom:5px;"><strong>Categoria:</strong> ${product.category}</p>
-        <p style="margin-bottom:5px;"><strong>Preço:</strong> <span style="color:#007bff; font-weight:bold;">R$ ${formatPrice(product.price)}</span> ${product.oldPrice > 0 ? `<span style="text-decoration:line-through; color:gray;">R$ ${formatPrice(product.oldPrice)}</span>` : ''}</p>
-        <p style="margin-bottom:5px;"><strong>Avaliação:</strong> ${generateRatingStars(product.rating)} (${product.rating.toFixed(1)})</p>
-        <hr style="margin:15px 0;">
-        <p style="white-space:pre-wrap; line-height:1.5;"><strong>Descrição Técnica:</strong><br>${product.description || 'Sem descrição disponível.'}</p>
-        <div style="margin-top:20px;">
-            <button class="whatsapp-btn" onclick="redirectToWhatsApp(product)">
-                <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-            </button>
-        </div>
-    `;
+  content.innerHTML = `
+    <h1 style="font-size:1.5rem; margin-bottom:10px;">${product.name}</h1>
+    <p><strong>Categoria:</strong> ${product.category}</p>
+    <p style="font-size:1.4rem; color:#007bff; font-weight:bold; margin:10px 0;">
+      R$ ${formatPrice(product.price)} 
+      ${product.oldPrice > 0 ? `<span style="text-decoration:line-through; color:#999; font-size:1rem; margin-left:8px;">R$ ${formatPrice(product.oldPrice)}</span>` : ""}
+    </p>
+    <p><strong>Avaliação:</strong> ${generateRatingStars(product.rating)} (${product.rating.toFixed(1)})</p>
+    <hr style="margin:20px 0;">
+    <h3>Especificações Técnicas</h3>
+    <pre style="white-space:pre-wrap; font-family:inherit;">${product.description}</pre>
+    <div style="margin-top:20px;">
+      <button class="whatsapp-btn" onclick="redirectToWhatsApp(product)">
+        <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
+      </button>
+    </div>
+  `;
 
-    modal.style.display = 'flex';
+  modal.style.display = 'flex';
 }
 
 function closeProductModal() {
-    document.getElementById('product-modal').style.display = 'none';
+  document.getElementById('product-modal').style.display = 'none';
 }
 
 
@@ -1721,19 +1725,18 @@ function closeProductModal() {
   });
 </script>
 
-<!-- Modal de Visualização de Produto Profissional -->
-<div id="product-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:white; max-width:900px; width:95%; max-height:90vh; border-radius:12px; overflow:hidden; position:relative; display:flex; flex-direction:column;">
-    <button onclick="closeProductModal()" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:2rem; font-weight:bold; color:#444; cursor:pointer; z-index:10;">&times;</button>
-    <div style="display:flex; flex-direction:row; flex:1; overflow:hidden;">
-      <div style="flex:1; background:#f9f9f9; display:flex; align-items:center; justify-content:center; padding:20px;">
-        <img id="modal-img" src="" alt="" style="max-width:100%; max-height:100%; border-radius:10px; object-fit:contain;">
+<!-- Modal Estilo Mercado Livre -->
+<div id="product-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+  <div style="background:#fff; width:95%; max-width:700px; max-height:95vh; border-radius:12px; overflow-y:auto; position:relative; padding-bottom:30px;">
+    <button onclick="closeProductModal()" style="position:sticky; top:0; right:0; background:none; border:none; font-size:2rem; color:#333; font-weight:bold; padding:10px; cursor:pointer; z-index:100;">&times;</button>
+    <div style="padding:20px;">
+      <div style="text-align:center;">
+        <img id="modal-img" src="" alt="" style="width:100%; max-height:400px; object-fit:contain; border-radius:8px; margin-bottom:20px;">
       </div>
-      <div style="flex:1.2; padding:25px; overflow-y:auto;" id="modal-content">
-        <!-- Conteúdo dinâmico -->
-      </div>
+      <div id="modal-content" style="font-size:1rem; color:#333; line-height:1.6;"></div>
     </div>
   </div>
+</div>
 </div>
 
 </body>
