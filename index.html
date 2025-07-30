@@ -1468,6 +1468,7 @@
                     id: product.ID,
                     name: product.Nome,
                     category: product.Categoria,
+		    especificacao: product.Especificacoes,
                     price: parseFloat(product['Preço']?.replace(/\./g, '').replace(',', '.')) || 0,
                     oldPrice: parseFloat(product['Preço Antigo']?.replace(/\./g, '').replace(',', '.')) || 0,
                     image: product.Imagem,
@@ -1679,9 +1680,10 @@ function showProductModal(product) {
     <p><strong>Avaliação:</strong> ${generateRatingStars(product.rating)} (${product.rating.toFixed(1)})</p>
     <hr style="margin:20px 0;">
     <h3>Especificações Técnicas</h3>
+    <p>${product.especificacao}</p>
     <pre style="white-space:pre-wrap; font-family:inherit;">${product.description}</pre>
     <div style="margin-top:20px;">
-      <button class="whatsapp-btn" onclick="redirectToWhatsApp(product)">
+      <button class="whatsapp-btn" onclick="redirectToWhatsApp(${JSON.stringify(product).replace(/"/g, '&quot;')})">
         <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
       </button>
     </div>
